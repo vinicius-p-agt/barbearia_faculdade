@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Barber - Agendamento</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="flex h-screen">
+    <div class="flex-1 flex flex-col overflow-hidden">
+      <header class="header flex items-center justify-between p-4">
+        <h1 class="text-xl font-semibold">Novo Agendamento</h1>
+        <div class="flex items-center">
+          <button class="bg-gray-700 p-2 rounded-full text-gray-300 hover:text-white mr-3">
+            <i class="fas fa-bell"></i>
+          </button>
+          <button class="flex items-center text-sm text-gray-300 hover:text-white">
+            <span class="mr-2">Sair</span>
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="flex-1 overflow-y-auto bg-gray-900 p-6">
+        <form action="agendar.php" method="POST" id="agendamento-form">
+          <div class="card p-6 mb-6">
+            <!-- Informações do Cliente -->
+            <div class="mb-8">
+              <h2 class="section-title mb-4">INFORMAÇÕES DO CLIENTE</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-400 mb-2">Nome do Cliente</label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <i class="fas fa-user text-gray-400"></i>
+                    </div>
+                    <input type="text" name="nome_cliente" class="form-input block w-full pl-10 py-3" placeholder="Digite o nome do cliente" required>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-400 mb-2">Telefone para contato</label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <i class="fas fa-phone text-gray-400"></i>
+                    </div>
+                    <input type="text" name="telefone" class="form-input block w-full pl-10 py-3" placeholder="(00) 00000-0000" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Serviços -->
+            <div class="mb-8">
+              <h2 class="section-title mb-4">SERVIÇOS</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="service-card p-4 cursor-pointer" data-servico="Corte Clássico" data-valor="35">
+                  <div class="text-center">
+                    <i class="fas fa-cut text-2xl mb-2"></i>
+                    <h3 class="text-md font-medium">Corte Clássico</h3>
+                    <p class="service-price mt-2">R$35,00</p>
+                    <p class="text-xs text-gray-400 mt-1">Duração: 30min</p>
+                  </div>
+                </div>
+                <div class="service-card p-4 cursor-pointer" data-servico="Low Fade" data-valor="40">
+                  <div class="text-center">
+                    <i class="fas fa-pen-fancy text-2xl mb-2"></i>
+                    <h3 class="text-md font-medium">Low Fade</h3>
+                    <p class="service-price mt-2">R$40,00</p>
+                    <p class="text-xs text-gray-400 mt-1">Duração: 35min</p>
+                  </div>
+                </div>
+                <div class="service-card p-4 cursor-pointer" data-servico="High Fade" data-valor="40">
+                  <div class="text-center">
+                    <i class="fas fa-shoe-prints text-2xl mb-2"></i>
+                    <h3 class="text-md font-medium">High Fade</h3>
+                    <p class="service-price mt-2">R$40,00</p>
+                    <p class="text-xs text-gray-400 mt-1">Duração: 35min</p>
+                  </div>
+                </div>
+                <div class="service-card p-4 cursor-pointer" data-servico="Militar" data-valor="30">
+                  <div class="text-center">
+                    <i class="fas fa-user-alt text-2xl mb-2"></i>
+                    <h3 class="text-md font-medium">Militar</h3>
+                    <p class="service-price mt-2">R$30,00</p>
+                    <p class="text-xs text-gray-400 mt-1">Duração: 25min</p>
+                  </div>
+                </div>
+                <div class="service-card p-4 cursor-pointer" data-servico="Social" data-valor="35">
+                  <div class="text-center">
+                    <i class="fas fa-pencil-alt text-2xl mb-2"></i>
+                    <h3 class="text-md font-medium">Social</h3>
+                    <p class="service-price mt-2">R$35,00</p>
+                    <p class="text-xs text-gray-400 mt-1">Duração: 30min</p>
+                  </div>
+                </div>
+                <div class="service-card p-4 cursor-pointer" data-servico="Mullet" data-valor="45">
+                  <div class="text-center">
+                    <i class="fas fa-snowflake text-2xl mb-2"></i>
+                    <h3 class="text-md font-medium">Mullet</h3>
+                    <p class="service-price mt-2">R$45,00</p>
+                    <p class="text-xs text-gray-400 mt-1">Duração: 40min</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <h3 class="text-sm font-medium text-gray-400 mb-3">Serviço de Barba</h3>
+                <div class="flex items-center">
+                  <label class="flex items-center mr-4">
+                    <input type="radio" name="barba" value="Sim" class="h-4 w-4 text-amber-500">
+                    <span class="ml-2 text-sm">Sim</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="radio" name="barba" value="Não" class="h-4 w-4 text-amber-500" checked>
+                    <span class="ml-2 text-sm">Não</span>
+                  </label>
+                  <span class="ml-6 text-amber-500 font-medium">R$25,00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Data e Horário -->
+            <div class="mb-8">
+              <h2 class="section-title mb-4">DATA E HORÁRIO</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-400 mb-2">Selecione a Data</label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <i class="far fa-calendar-alt text-gray-400"></i>
+                    </div>
+                    <input type="date" name="data" class="form-input block w-full pl-10 py-3" required>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-400 mb-2">Horários Disponíveis</label>
+                  <div class="grid grid-cols-4 gap-2">
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">09:00</div>
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">09:30</div>
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">10:00</div>
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">10:30</div>
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">11:00</div>
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">11:30</div>
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">14:00</div>
+                    <div class="time-slot py-2 px-1 text-center cursor-pointer">14:30</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resumo -->
+            <div class="bg-gray-800 p-4 rounded-md mt-6">
+              <h2 class="section-title mb-4">RESUMO DO AGENDAMENTO</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p class="text-sm text-gray-400">Cliente: <span id="resumo-nome-cliente" class="text-white">Nome do Cliente</span></p>
+                  <p class="text-sm text-gray-400">Telefone: <span id="resumo-telefone" class="text-white">(00) 00000-0000</span></p>
+                  <p class="text-sm text-gray-400">Data: <span id="resumo-data" class="text-white">__/__/____</span></p>
+                  <p class="text-sm text-gray-400">Horário: <span id="resumo-horario" class="text-white">--:--</span></p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">Serviço: <span id="resumo-servico" class="text-white">---</span></p>
+                  <p class="text-sm text-gray-400">Valor: <span id="resumo-valor" class="text-white">R$0,00</span></p>
+                  <p class="text-sm text-gray-400">Barba: <span id="resumo-barba" class="text-white">Não</span></p>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary w-full py-3 mt-4 text-center">Confirmar Agendamento</button>
+            </div>
+          </div>
+
+          <!-- Inputs Ocultos -->
+          <input type="hidden" name="servico" id="input-servico">
+          <input type="hidden" name="valor" id="input-valor">
+          <input type="hidden" name="hora" id="input-hora">
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

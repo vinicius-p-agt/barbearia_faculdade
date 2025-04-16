@@ -1,0 +1,71 @@
+*{
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.navbar {
+    border-bottom: 1px solid #ffffff;
+    background: linear-gradient(to right, #031926, #196069, #031926);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.form-control {
+    border: 1px solid #ffffff; 
+    border-radius: 8px; 
+    padding: 10px; 
+    font-size: 16px; 
+}
+
+.btn:focus, 
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #6c757d !important;
+}
+
+.btn-login {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.btn-login:hover {
+    background: linear-gradient(to right, #031926, #196069, #031926);
+    transform: scale(1.03); 
+    
+}
+
+.gradient-border {
+    background: white;
+    border-radius: 8px; 
+    padding: 1px; 
+    display: inline-block;
+}
+
+.gradient-border .card {
+    border-radius: 6px;
+    overflow: hidden;
+}

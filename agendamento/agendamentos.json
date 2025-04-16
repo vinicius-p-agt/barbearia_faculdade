@@ -1,0 +1,38 @@
+[
+  {
+    "nome_cliente": "Vinicius",
+    "telefone": "62 98602-0003",
+    "data": "2025-03-22",
+    "hora": "14:30",
+    "servico": "Corte Clássico",
+    "valor": "35",
+    "barba": "Sim"
+  },
+  {
+    "nome_cliente": "Vinicius",
+    "telefone": "62 986020003",
+    "data": "2025-03-21",
+    "hora": "14:00",
+    "servico": "Low Fade",
+    "valor": "40",
+    "barba": "Sim"
+  },
+  {
+    "nome_cliente": "Vinicius",
+    "telefone": "62 986020003",
+    "data": "2025-03-21",
+    "hora": "14:00",
+    "servico": "Militar",
+    "valor": "30",
+    "barba": "Não"
+  },
+  {
+    "nome_cliente": "Vinicius",
+    "telefone": "62 986020003",
+    "data": "2025-03-21",
+    "hora": "14:30",
+    "servico": "Mullet",
+    "valor": "45",
+    "barba": "Sim"
+  }
+]

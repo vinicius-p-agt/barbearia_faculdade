@@ -1,0 +1,91 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header {
+  background-color: #1A1A1A;
+  border-bottom: 1px solid #333;
+}
+.section-title {
+  color: #E0A240;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+.card {
+  background-color: #1E1E1E;
+  border-radius: 8px;
+}
+.form-input {
+  background-color: #2A2A2A;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+.form-input:focus {
+  border-color: #E0A240;
+  outline: none;
+}
+.service-card {
+  background-color: #2A2A2A;
+  border-radius: 6px;
+  border: 1px solid #444;
+  transition: all 0.3s ease;
+}
+.service-card:hover {
+  border-color: #E0A240;
+  transform: translateY(-2px);
+}
+.service-card.selected {
+  background-color: #E0A240;
+  border-color: #E0A240;
+  color: #000000;
+}
+.service-card.selected .service-price {
+  color: #000000;
+}
+.service-price {
+  color: #E0A240;
+  font-weight: 600;
+}
+.btn-primary {
+  background-color: #E0A240;
+  border-radius: 25px;
+  color: #000000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #C89036;
+  transform: translateY(-2px);
+}
+.time-slot {
+  background-color: #2A2A2A;
+  border: 1px solid #444;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.time-slot:hover {
+  border-color: #E0A240;
+}
+.time-slot.selected {
+  background-color: #E0A240;
+  border-color: #E0A240;
+  color: #000000;
+}
+.sidebar {
+  background-color: #1A1A1A;
+  border-right: 1px solid #333;
+}
+.nav-link {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.nav-link:hover {
+  background-color: #2A2A2A;
+}
+.nav-link.active {
+  background-color: #2A2A2A;
+  border-left: 3px solid #E0A240;
+}
